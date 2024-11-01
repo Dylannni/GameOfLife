@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"time"
+
 	"uk.ac.bris.cs/gameoflife/stubs"
 	"uk.ac.bris.cs/gameoflife/util"
 )
@@ -70,8 +71,8 @@ func outputPGM(c distributorChannels, p Params, turn int, world [][]uint8) {
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels, keyPresses <-chan rune) {
-	address := "localhost"
-	port := "8080"
+	address := "34.229.127.162"
+	port := "8030"
 
 	broker, err := rpc.Dial("tcp", address+":"+port)
 	dialError(err, c)

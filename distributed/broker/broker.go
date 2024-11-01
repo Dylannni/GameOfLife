@@ -8,17 +8,18 @@ import (
 	"net/rpc"
 	"os"
 	"sync"
+
 	"uk.ac.bris.cs/gameoflife/stubs"
 	"uk.ac.bris.cs/gameoflife/util"
 )
 
-var Nodes int
+var Nodes int = 2
 var NodesList = [...]stubs.ServerAddress{
-	{Address: "localhost", PrivateAddress: "localhost", Port: "8081"},
-	{Address: "localhost", PrivateAddress: "localhost", Port: "8082"},
-	{Address: "localhost", PrivateAddress: "localhost", Port: "8083"},
-	{Address: "localhost", PrivateAddress: "localhost", Port: "8084"},
-	{Address: "localhost", PrivateAddress: "localhost", Port: "8085"},
+	{Address: "18.234.112.74", PrivateAddress: "18.234.112.74", Port: "8031"},
+	{Address: "54.162.25.207", PrivateAddress: "54.162.25.207", Port: "8032"},
+	// {Address: "localhost", PrivateAddress: "localhost", Port: "8083"},
+	// {Address: "localhost", PrivateAddress: "localhost", Port: "8084"},
+	// {Address: "localhost", PrivateAddress: "localhost", Port: "8085"},
 }
 
 type Server struct {
